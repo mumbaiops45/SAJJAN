@@ -1,0 +1,34 @@
+.hero {
+  position: relative;
+}
+
+/* ============================= */
+/* MOBILE BACKGROUND IMAGE */
+/* ============================= */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/home/hero-mobile.jpg") center/cover no-repeat;
+  z-index: 0;
+}
+
+/* Hide mobile image on desktop */
+@media (min-width: 768px) {
+  .hero::before {
+    display: none;
+  }
+}
+
+/* ============================= */
+/* DARK OVERLAY */
+/* ============================= */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
