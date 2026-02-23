@@ -73,7 +73,7 @@ strong {
 
 before:content-['']
 before:absolute before:inset-0
-before:bg-[linear-gradient(149deg,var(--primary)_0%,var(--secondary)_75%,transparent_140%)]
+before:bg-[linear-gradient(149deg,var(--secondary)_0%,var(--secondary)_60%,transparent_140%)]
 before:z-[-1]
 after:content-['']
 after:absolute
@@ -84,7 +84,6 @@ after:z-[-1]
 /* button */
 .primary-btn,
 .secondary-btn {
-  display: inline-block;
   padding: 12px 28px;
   font-size: 16px;
   font-weight: 500;
@@ -110,6 +109,7 @@ after:z-[-1]
   background-color: var(--secondary);
   color: white;
   border-color: var(--secondary);
+  border: 1px solid white;
 }
 
 /* ============================= */
@@ -130,6 +130,25 @@ after:z-[-1]
 }
 
 
-/* home product card animation */
+/* home industry card animation */
+@keyframes slideInRight40 {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideInRight40 {
+  animation: slideInRight40 8s ease-in-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+body {
+  overflow-x: hidden;
+}
 
 

@@ -1,7 +1,11 @@
 "use client";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import styles from "./home.module.css";
 import Link from "next/link";
+import WhyChooseUs from "@/components/WhyChoose";
+import Infrastructure from "@/components/HomeInfrastructure";
+import OurPartners from "@/components/OurPartners";
 const timeline = [
   {
     year: "01",
@@ -99,6 +103,35 @@ const timeline = [
     image: "/home/CEMENT INDUSTRY.jpg"
   }
 ];
+const industries = [
+  {
+    title: "STEEL INDUSTRY / GALVANIZING LINES",
+    description:
+      "SAJJAN manufactures centrifugal and static cast components for steel mills and furnaces in heat- and corrosion-resistant grades."
+  },
+  {
+    title: "CEMENT INDUSTRY",
+    description:
+      "High-quality cast components designed for durability and reliable performance in large-scale cement production."
+  },
+  {
+    title: "PUMPS / VALVES & IMPELLORS",
+    description:
+      "Precision stainless steel castings with advanced heat treatment and non-destructive testing."
+  },
+  {
+    title: "FOOD TECHNOLOGY",
+    description:
+      "Ultra-clean stainless steel castings using advanced CAD, de-gassing technology, and CNC machining."
+  },
+  {
+    title: "PETROCHEMICAL INDUSTRY",
+    description:
+      "High-performance castings engineered for demanding petrochemical environments."
+  }
+];
+
+
 
 export default function Home() {
   return (
@@ -142,12 +175,15 @@ export default function Home() {
 
           <h2 className="relative inline-block pb-4
       after:content-['']
-      after:absolute
-      after:left-0
-      after:bottom-0
-      after:w-1/3
-      after:h-0.5
-      after:bg-[var(--primary)]">
+after:absolute
+after:left-0
+after:bottom-0
+after:w-full
+after:h-1
+after:rounded-full
+after:bg-gradient-to-r
+after:from-[var(--primary)]
+after:to-transparent">
 
             <span className="text-[var(--primary)]">
               SAJJAN
@@ -199,17 +235,20 @@ export default function Home() {
         </div>
 
       </section>
-      <section className="py-20 w-full">
+      <section className="py-10 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="relative inline-block pb-4
       after:content-['']
-      after:absolute
-      after:left-0
-      after:bottom-0
-      after:w-full
-      after:h-0.5
-      after:bg-[var(--primary)] text-4xl font-bold text-gray-900 dark:text-white mb-4">
+after:absolute
+after:left-0
+after:bottom-0
+after:w-full
+after:h-1
+after:rounded-full
+after:bg-gradient-to-r
+after:from-[var(--primary)]
+after:to-transparent mb-4">
               Our <span className="text-[var(--primary)]">Products</span>
             </h2>
             <p className=" text-gray-300 max-w-3xl mx-auto">
@@ -241,12 +280,12 @@ export default function Home() {
   after:left-0
   after:right-0
   after:h-3
-  after:rounded-full 
+  after:rounded-t-2xl
   after:bg-gradient-to-r 
-  after:from-[var(--secondary)]
-  after:to-[var(--primery)] 
+  after:from-[var(--primary)]
+  after:to-[var(--secondary)]
   backface-visibility:hidden]">
-                        <div className="bg-black/30 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                           <div
                             className={`inline-block px-3 py-1 rounded-full  mb-4 ${item.color}`}
                           >
@@ -311,6 +350,128 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <WhyChooseUs />
+      <Infrastructure />
+      <section className="industry"
+      >
+        <div className="flex justify-center"><h2
+          className="relative inline-block pb-4
+      after:content-['']
+after:absolute
+after:left-0
+after:bottom-0
+after:w-full
+after:h-1
+after:rounded-full
+after:bg-gradient-to-r
+after:from-[var(--primary)]
+after:to-transparent"
+        >
+          <span className="text-[var(--primary)]">Industries </span>We Serve
+        </h2></div>
+
+
+        {industries.map((item, index) => (
+          <section
+            key={index}
+            className="flex flex-col md:flex-row items-center justify-start gap-6 px-4 md:px-10 lg:px-20 py-10 my-15 md:my-0 relative"
+          >
+            {/* heading */}
+            <div
+              className="
+        w-full md:w-5/12 pt-5 pb-15 px-6 md:py-20 md:px-20
+        bg-white/20 backdrop-blur-lg
+        border border-[var(--primary)]
+        rounded-xl shadow-lg
+        transition duration-300
+        flex items-start md:items-center justify-center"
+            >
+              <h3
+                className=" relative inline-block pb-4
+      after:content-['']
+after:absolute
+after:left-0
+after:bottom-0
+after:w-full
+after:h-1
+after:rounded-full
+after:bg-gradient-to-r
+after:from-[var(--primary)]
+after:to-transparent"
+              >
+                {item.title}
+              </h3>
+            </div>
+            {/* slide para */}
+
+            <div
+              className="
+        md:w-1/2 w-[80vw] 
+    md:absolute md:left-85 lg:left-120 absolute top-35 md:top-auto 
+    bg-[var(--secondary)]/70 backdrop-blur-lg
+    border border-white/35
+    rounded-xl p-6 md:p-8 shadow-lg
+    hover:border-[var(--secondary)]
+    transition duration-300 hover:translate-y-1
+    animate-slideInRight40
+    flex flex-col items-end justify-center"
+            >
+              <p>{item.description}</p>
+              <Link href="/industries">
+                <button className="flex  items-center gap-2 secondary-btn">
+                  Read More
+                  <ArrowRight size={18} />
+                </button>
+              </Link>
+
+
+            </div>
+
+          </section>
+        ))}
+      </section>
+      <OurPartners/>
+      {/* ================= CTA SECTION ================= */}
+      <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
+
+        {/* Glow Effect */}
+       
+
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight">
+            Ready to Power Your Project with
+            <span className="text-[var(--primary)]"> SAJJAN?</span>
+          </h2>
+
+          {/* Description */}
+          <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+            Partner with SAJJAN for high-performance stainless steel and alloy steel
+            casting solutions engineered for durability, efficiency, and industrial excellence.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+
+            <Link className="" href="/quote">
+              <button className="flex justify-between items-center gap-2 primary-btn">
+                Request a Quote
+                <ArrowRight size={18} />
+              </button>
+            </Link>
+
+            <Link href="/industries">
+              <button className="flex justify-between items-center gap-2 secondary-btn">
+                Explore Industries
+              </button>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+      
+
 
     </>
 
