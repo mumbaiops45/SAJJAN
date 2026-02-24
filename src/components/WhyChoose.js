@@ -55,12 +55,12 @@ export default function WhyChooseUs() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/80 py-24">
+        <section className="relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/80 py-20 px-15">
 
             {/* Top Gradient Line */}
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-l from-[var(--primary)] to-[var(--secondary)]"></div>
 
-            <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-start">
 
                 {/* LEFT SIDE */}
                 <div>

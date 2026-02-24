@@ -122,7 +122,7 @@ const About = () => {
 
       </motion.section>
       {/* vision */}
-      <section className="vision relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/50 py-24 px-6 lg:px-15">
+      <section className="vision relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/50 py-24 px-6 lg:px-20">
 
         {/* Top Gradient Line */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-l from-[var(--primary)] to-[var(--secondary)]"></div>
@@ -267,7 +267,7 @@ after:to-transparent mb-4">
       </motion.section>
        {/* sertification */}
             <motion.section
-              className="Certified relative py-20
+              className="Certified relative py-24 
         bg-gradient-to-br 
         from-[var(--primary)]/50 
         via-[var(--secondary)]/10 

@@ -1,11 +1,12 @@
 "use client";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import styles from "./home.module.css";
 import Link from "next/link";
 import WhyChooseUs from "@/components/WhyChoose";
 import Infrastructure from "@/components/HomeInfrastructure";
 import OurPartners from "@/components/OurPartners";
+import { motion } from "framer-motion";
 const timeline = [
   {
     year: "01",
@@ -130,6 +131,24 @@ const industries = [
       "High-performance castings engineered for demanding petrochemical environments."
   }
 ];
+const certifications = [
+  {
+    title: "ISO 9001:2015",
+    description: `SAJJAN is accredited as an ISO 9001:2015 certified organization. This certification implies that SAJJAN has met strict guidelines with regard to product design processes, manufacturing procedures, distribution systems, and customer service methods for all products and services that SAJJAN provides.`
+  },
+  {
+    title: "ISO 14001",
+    description: `SAJJAN has gained ISO 14001:2015 certification for environmental management.`
+  },
+  {
+    title: "OHSAS 18001",
+    description: `SAJJAN has implemented the OHSAS 18001 system and the organization is working towards a structured and streamlined procedure to maintain health and safety standards.`
+  },
+  {
+    title: "ISO 45001: 2018",
+    description: `SAJJAN has upgraded to the ISO 45001: 2018 certification, world’s first integrated international standard for occupational health and safety. This is a new industry standard, the framework of which has been coordinated and developed by a committee of occupational health and safety experts from around the world. SAJJAN reinstated its health, safety and environmental committee and took a collaborative approach in reviewing all aspects of the company to ensure that the company is providing a safe and secure working environment.`
+  }
+];
 
 
 
@@ -227,11 +246,16 @@ after:to-transparent">
 
         {/* RIGHT IMAGE */}
         <div className="w-full lg:w-2/5">
-          <img
-            src="/home/industrial-heat-resistant-steel-castings-manufacturer.png"
-            alt="industrial-heat-resistant-steel-castings-manufacturer"
-            className="w-full h-auto object-cover rounded-xl"
-          />
+
+          <div className="relative w-full h-[400px] lg:h-[450px] rounded-xl overflow-hidden">
+            <Image
+              src="/home/industrial-heat-resistant-steel-castings-manufacturer.png"
+              alt="industrial-heat-resistant-steel-castings-manufacturer"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </div>
 
       </section>
@@ -256,67 +280,82 @@ after:to-transparent mb-4">
             </p>
           </div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5"></div>
+          <div className="max-w-7xl mx-auto px-10 py-10">
 
-            {timeline.map((item, index) => (
-              <div
-                key={index}
-                className={`relative flex items-center mb-12 ${index % 2 === 0 ? "justify-start" : "justify-end"
-                  }`}
-              >
-                <div
-                  className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-8 text-right" : "md:pl-8 text-left"
-                    }`}
-                >
-                  <div className="group [perspective:1000px] ">
+            <div
+              className="
+      grid gap-6
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-4
+      auto-rows-auto
+    "
+            >
+
+              {timeline.map((item, index) => {
+
+                // Existing large card logic
+                const isLarge = index % 3 === 0;
+
+                // Target year 8 card
+                const isYearEight =
+                  item.year === 8 ||
+                  item.year === "8";
+
+                return (
+                  <div
+                    key={index}
+                    className={`
+            relative group [perspective:1000px]
+            ${isYearEight
+                        ? "lg:col-span-3 lg:row-span-2"
+                        : isLarge
+                          ? "lg:col-span-2 lg:row-span-2"
+                          : "lg:col-span-1 lg:row-span-1"
+                      }
+          `}
+                  >
                     <div className="relative h-full w-full rounded-2xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
 
                       {/* FRONT */}
-                      <div className="relative 
-  after:content-[''] 
-  after:absolute 
-  after:top-0 
-  after:left-0
-  after:right-0
-  after:h-3
-  after:rounded-t-2xl
-  after:bg-gradient-to-r 
-  after:from-[var(--primary)]
-  after:to-[var(--secondary)]
-  backface-visibility:hidden]">
-                        <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                          <div
-                            className={`inline-block px-3 py-1 rounded-full  mb-4 ${item.color}`}
-                          >
-                            {item.year}
-                          </div>
+                      <div
+                        className="relative h-full w-full bg-white/10 backdrop-blur-md p-6 rounded-2xl
+              after:content-[''] 
+              after:absolute 
+              after:top-0 
+              after:left-0
+              after:right-0
+              after:h-2
+              after:rounded-t-2xl
+              after:bg-gradient-to-r 
+              after:from-[var(--primary)]
+              after:to-[var(--secondary)]
+              [backface-visibility:hidden]"
+                      >
+                        <div className={`inline-block px-3 py-1 rounded-full mb-3 text-xs ${item.color}`}>
+                          {item.year}
+                        </div>
 
-                          <h3 className=" mb-3">
-                            {item.title}
-                          </h3>
+                        <h3 className="text-lg font-semibold mb-2 text-white">
+                          {item.title}
+                        </h3>
 
-                          <p className="text-gray-200 mb-4">
-                            {item.description}
-                          </p>
+                        <p className="text-sm text-gray-300 mb-4">
+                          {item.description}
+                        </p>
 
-                          <div className="space-y-2">
-                            {item.features.map((feature, featureIndex) => (
-                              <div
-                                key={featureIndex}
-                                className={`flex items-center ${index % 2 === 0 ? "justify-end" : "justify-start"
-                                  }`}
-                              >
-                                <span className="text-sm text-gray-400">
-                                  • {feature}
-                                </span>
-                              </div>
-                            ))}
-                          </div>
+                        <div className="space-y-1">
+                          {item.features.map((feature, i) => (
+                            <div key={i} className="flex items-start gap-2">
+                              <span className="text-[var(--secondary)] text-xs">•</span>
+                              <span className="text-xs text-gray-400">
+                                {feature}
+                              </span>
+                            </div>
+                          ))}
                         </div>
                       </div>
 
-                      {/* BACK */}
                       {/* BACK */}
                       <div className="absolute inset-0 rounded-2xl overflow-hidden shadow-xl [transform:rotateY(180deg)] [backface-visibility:hidden]">
                         <Image
@@ -329,15 +368,13 @@ after:to-transparent mb-4">
 
                     </div>
                   </div>
+                );
+              })}
 
-                </div>
-
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white dark:bg-black border-4 border-[var(--primary)] rounded-full z-10"></div>
-              </div>
-            ))}
+            </div>
           </div>
 
-          <div className="text-center mt-16">
+          <div className="text-center mt-10">
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
               And this is just the beginning...
             </p>
@@ -350,6 +387,88 @@ after:to-transparent mb-4">
           </div>
         </div>
       </section>
+      {/* sertification */}
+      <motion.section
+        className="Certified relative py-16
+  bg-gradient-to-br 
+  from-[var(--primary)]/50 
+  via-[var(--secondary)]/10 
+  to-[var(--primary)]/50 overflow-hidden"
+
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 3, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1 }}
+      >
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="relative inline-block pb-4
+        after:content-['']
+        after:absolute
+        after:left-0
+        after:bottom-0
+        after:w-full
+        after:h-1
+        after:rounded-full
+        after:bg-gradient-to-r
+        after:from-[var(--primary)]
+        after:to-transparent">
+              We
+              <span className="text-[var(--primary)]"> are Certified</span>
+            </h2>
+            <p className=" text-gray-300 max-w-3xl mx-auto">
+              SAJJAN is a pioneer in manufacturing heat-resistant tool steel and stainless steel castings through centrifugal, static, and investment casting processes.
+            </p>
+          </div>
+
+          {/* Certification Blocks */}
+          <div className="grid grid-cols-1 gap-8 mt-12">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/80 backdrop-blur-md p-6 rounded-xl 
+      border-l-4 border-[var(--primary)] shadow-md"
+
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                {/* Flex container */}
+                <div className="flex items-start gap-4">
+
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full 
+          bg-[var(--primary)]/10 
+          flex items-center justify-center">
+                    <ShieldCheck
+                      size={26}
+                      className="text-[var(--primary)]"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-[var(--primary)] font-semibold mb-2">
+                      {cert.title}
+                    </h3>
+
+                    <p className="text-sm leading-relaxed text-gray-700">
+                      {cert.description}
+                    </p>
+                  </div>
+
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </motion.section>
+
       <WhyChooseUs />
       <Infrastructure />
       <section className="industry"
@@ -374,13 +493,13 @@ after:to-transparent"
         {industries.map((item, index) => (
           <section
             key={index}
-            className="flex flex-col md:flex-row items-center justify-start gap-6 px-4 md:px-10 lg:px-20 py-10 my-15 md:my-0 relative"
+            className="flex flex-col md:flex-row items-center justify-start gap-6 px-4 md:px-10 lg:px-15 py-10 my-15 md:my-0 relative"
           >
             {/* heading */}
             <div
               className="
         w-full md:w-5/12 pt-5 pb-15 px-6 md:py-20 md:px-20
-        bg-white/20 backdrop-blur-lg
+        bg-white/5 backdrop-blur-lg
         border border-[var(--primary)]
         rounded-xl shadow-lg
         transition duration-300
@@ -430,12 +549,12 @@ after:to-transparent"
           </section>
         ))}
       </section>
-      <OurPartners/>
+      <OurPartners />
       {/* ================= CTA SECTION ================= */}
       <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
 
         {/* Glow Effect */}
-       
+
 
         <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
 
@@ -470,7 +589,8 @@ after:to-transparent"
           </div>
         </div>
       </section>
-      
+
+
 
 
     </>
