@@ -221,9 +221,9 @@ const Product = () => {
 
   return (
     <>
-      <h2 className="pt-20 pb-10 text-center text-4xl font-bold">
+      <h1 className="pt-20 pb-10 text-center text-4xl font-bold">
         Our <span className="text-[var(--primary)]">Products</span>
-      </h2>
+      </h1>
       <section className="relative py-10 px-6 lg:px-20 ">
 
         {/* Top Decoration Line */}
@@ -241,7 +241,7 @@ const Product = () => {
             <p className="text-gray-600 leading-relaxed mb-6">
               The range of products include fixtures, trays, grids and cast baskets to meet a number of furnace application and processes such as hardening, tempering, iso thermal annealing, carburising, nitriding and vacuum heat treatment. Backed by an experienced designing team, we are competent to make fixtures that are light weight. We use of the latest stress analysis software and can simulate the total load analysis. At SAJJAN, we design fixtures in accordance to the material properties and by calculating the strength of the material according to stress analysis. Our fixtures are long lasting and have several advantages:
             </p>
-            <p className="text-gray-600 leading-relaxed">
+            
               <div className="">
                 <p className="text-lg leading-relaxed max-w-4xl">
                   The product portfolio of
@@ -252,7 +252,7 @@ const Product = () => {
                   <span className="font-semibold"> Corrosion Resistant Castings</span>.
                 </p>
               </div>
-            </p>
+            
           </div>
 
           {/* Advantages */}

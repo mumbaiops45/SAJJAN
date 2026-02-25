@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -17,11 +18,14 @@ export default function Footer() {
   ];
 
   const productLinks = [
-    { name: "Industrial Valves", path: "/products/industrial-valves" },
-    { name: "Pipe Fittings", path: "/products/pipe-fittings" },
-    { name: "Pressure Vessels", path: "/products/pressure-vessels" },
-    { name: "Heat Exchangers", path: "/products/heat-exchangers" },
-    { name: "Custom Components", path: "/products/custom-components" },
+    { name: "CAST BELTS AND SPARES", path: "/products" },
+    { name: "HEAT TREATMENT FIXTURES", path: "/products" },
+    { name: "PARTS FOR FOOD MACHINERIES", path: "/products" },
+    { name: "ROLLERS AND RADIANT TUBES", path: "/products" },
+    { name: "SEPARATORS AND DECANTERS", path: "/products" },
+    { name: "GALVANIZING LINE SPARES", path: "/products" },
+    { name: "PETROCHEMICAL INDUSTRY", path: "/products" },
+    { name: "CEMENT INDUSTRY", path: "/products" },
   ];
 
   return (
@@ -34,9 +38,8 @@ export default function Footer() {
         <div>
           <h2 className="text-2xl font-bold text-white mb-6">LOGO</h2>
           <p className="text-sm leading-7">
-            We deliver end-to-end industrial manufacturing solutions with
-            precision engineering, advanced technology, and long-term
-            reliability for global industries.
+
+            SAJJAN is a pioneer in the production of heat-resistant tool steel and stainless steel castings, manufactures through centrifugal, static and investment casting processes.
           </p>
         </div>
 
@@ -50,11 +53,10 @@ export default function Footer() {
               <li key={link.name}>
                 <Link
                   href={link.path}
-                  className={`transition duration-300 ${
-                    pathname === link.path
-                      ? "text-[color:var(--primary)]"
-                      : "hover:text-[color:var(--primary)]"
-                  }`}
+                  className={`transition duration-300 ${pathname === link.path
+                    ? "text-[color:var(--primary)]"
+                    : "hover:text-[color:var(--primary)]"
+                    }`}
                 >
                   {link.name}
                 </Link>
@@ -73,11 +75,10 @@ export default function Footer() {
               <li key={product.name}>
                 <Link
                   href={product.path}
-                  className={`transition duration-300 ${
-                    pathname === product.path
-                      ? "text-[color:var(--primary)]"
-                      : "hover:text-[color:var(--primary)]"
-                  }`}
+                  className={`transition duration-300 ${pathname === product.path
+                    ? "text-[color:var(--primary)]"
+                    : "hover:text-[color:var(--primary)]"
+                    }`}
                 >
                   {product.name}
                 </Link>
@@ -92,11 +93,51 @@ export default function Footer() {
             Contact Information
           </h3>
 
-          <ul className="space-y-4 text-sm">
-            <li>📍 Bengaluru, Karnataka 560038</li>
-            <li>📞 +91 84471 17195</li>
-            <li>✉️ info@example.com</li>
+          <ul className="space-y-4">
+            <li className="flex justify-START align-center gap-2"><MapPin size={22} className="text-[var(--primary)] flex-shrink-0" /> INDIA | GERMANY | ITALY | SCANDINAVIA | FRANCE | USA | JAPAN</li>
+            <li className="flex justify-START align-center gap-2"><Phone size={22} className="text-[var(--primary)] flex-shrink-0" /> +91 84471 17195</li>
+            <li className="flex justify-START align-center gap-2"><Mail size={22} className="text-[var(--primary)] flex-shrink-0" /> info@example.com</li>
           </ul>
+          {/* ===== SOCIAL MEDIA LINKS ===== */}
+          <div className="mt-12 flex items-center justify-start gap-3">
+
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-white hover:text-white hover:bg-[var(--primary)] transition duration-300"
+            >
+              <Facebook size={22} />
+            </a>
+
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-white hover:text-white hover:bg-[var(--primary)] transition duration-300"
+            >
+              <Twitter size={22} />
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-white hover:text-white hover:bg-[var(--primary)] transition duration-300"
+            >
+              <Instagram size={22} />
+            </a>
+
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-white hover:text-white hover:bg-[var(--primary)] transition duration-300"
+            >
+              <Youtube size={22} />
+            </a>
+
+          </div>
         </div>
       </div>
 

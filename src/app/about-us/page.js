@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck ,Scale} from "lucide-react";
 import OurPartners from "@/components/OurPartners";
 const certifications = [
   {
@@ -27,9 +27,9 @@ const certifications = [
 const About = () => {
   return (
     <>
-      <h2 className=" pt-20 text-center">
+      <h1 className=" pt-20 text-center">
         <span className="text-[var(--primary)]">About</span>  us
-      </h2>
+      </h1>
       {/* about intro */}
       <motion.section
         className="w-full py-10 lg:p-15 px-4
@@ -265,25 +265,25 @@ after:to-transparent mb-4">
         </div>
 
       </motion.section>
-       {/* sertification */}
-            <motion.section
-              className="Certified relative py-20
+      {/* sertification */}
+      <motion.section
+        className="Certified relative py-20
         bg-gradient-to-br 
         from-[var(--primary)]/50 
         via-[var(--secondary)]/10 
         to-[var(--primary)]/50 overflow-hidden"
-      
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 3, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 1 }}
-            >
-      
-              <div className="max-w-6xl mx-auto px-6 relative z-10">
-      
-                {/* Heading */}
-                <div className="text-center mb-16">
-                  <h2 className="relative inline-block pb-4
+
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 3, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1 }}
+      >
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="relative inline-block pb-4
               after:content-['']
               after:absolute
               after:left-0
@@ -294,98 +294,150 @@ after:to-transparent mb-4">
               after:bg-gradient-to-r
               after:from-[var(--primary)]
               after:to-transparent">
-                    We
-                    <span className="text-[var(--primary)]"> are Certified</span>
-                  </h2>
-                  <p className=" text-gray-300 max-w-3xl mx-auto">
-                    SAJJAN is a pioneer in manufacturing heat-resistant tool steel and stainless steel castings through centrifugal, static, and investment casting processes.
-                  </p>
-                </div>
-      
-                {/* Certification Blocks */}
-                <div className="grid grid-cols-1 gap-8 mt-12">
-                  {certifications.map((cert, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-white/80 backdrop-blur-md p-6 rounded-xl 
+              We
+              <span className="text-[var(--primary)]"> are Certified</span>
+            </h2>
+            <p className=" text-gray-300 max-w-3xl mx-auto">
+              SAJJAN is a pioneer in manufacturing heat-resistant tool steel and stainless steel castings through centrifugal, static, and investment casting processes.
+            </p>
+          </div>
+
+          {/* Certification Blocks */}
+          <div className="grid grid-cols-1 gap-8 mt-12">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/80 backdrop-blur-md p-6 rounded-xl 
             border-l-4 border-[var(--primary)] shadow-md"
-      
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      transition={{ duration: 0.8, delay: index * 0.1 }}
-                    >
-                      {/* Flex container */}
-                      <div className="flex items-start gap-4">
-      
-                        {/* Icon */}
-                        <div className="flex-shrink-0 w-12 h-12 rounded-full 
+
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                {/* Flex container */}
+                <div className="flex items-start gap-4">
+
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full 
                 bg-[var(--primary)]/10 
                 flex items-center justify-center">
-                          <ShieldCheck
-                            size={26}
-                            className="text-[var(--primary)]"
-                          />
-                        </div>
-      
-                        {/* Content */}
-                        <div>
-                          <h3 className="text-[var(--primary)] font-semibold mb-2">
-                            {cert.title}
-                          </h3>
-      
-                          <p className="text-sm leading-relaxed text-gray-700">
-                            {cert.description}
-                          </p>
-                        </div>
-      
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-      
-              </div>
-            </motion.section>
-            <OurPartners />
-            <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
-            
-                    {/* Glow Effect */}
-            
-            
-                    <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-            
-                      {/* Heading */}
-                      <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight">
-                        Ready to Power Your Project with
-                        <span className="text-[var(--primary)]"> SAJJAN?</span>
-                      </h2>
-            
-                      {/* Description */}
-                      <p className="text-gray-400 max-w-2xl mx-auto mb-10">
-                        Partner with SAJJAN for high-performance stainless steel and alloy steel
-                        casting solutions engineered for durability, efficiency, and industrial excellence.
-                      </p>
-            
-                      {/* Buttons */}
-                      <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            
-                        <Link className="" href="/quote">
-                          <button className="flex justify-between items-center gap-2 primary-btn">
-                            Request a Quote
-                            <ArrowRight size={18} />
-                          </button>
-                        </Link>
-            
-                        <Link href="/industries">
-                          <button className="flex justify-between items-center gap-2 secondary-btn">
-                            Explore Industries
-                          </button>
-                        </Link>
-            
-                      </div>
-                    </div>
-                  </section>
+                    <ShieldCheck
+                      size={26}
+                      className="text-[var(--primary)]"
+                    />
+                  </div>
 
+                  {/* Content */}
+                  <div>
+                    <h3 className="text-[var(--primary)] font-semibold mb-2">
+                      {cert.title}
+                    </h3>
+
+                    <p className="text-sm leading-relaxed text-gray-700">
+                      {cert.description}
+                    </p>
+                  </div>
+
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+        </div>
+      </motion.section>
+      <OurPartners />
+          <section className="code_of_cunduct relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/50 py-24 px-6 lg:px-15">
+
+      {/* Top Gradient Line */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-l from-[var(--primary)] to-[var(--secondary)]"></div>
+
+      <div className="max-w-7xl mx-auto">
+
+        {/* ===== HEADING ===== */}
+        <div className="mb-8">
+          <h2
+            className="relative inline-block pb-4
+            after:content-['']
+            after:absolute
+            after:left-0
+            after:bottom-0
+            after:w-full
+            after:h-1
+            after:rounded-full
+            after:bg-gradient-to-r
+            after:from-[var(--primary)]
+            after:to-transparent"
+          >
+            <span className="text-[var(--primary)]">Code </span>
+            of
+            <span className="text-[var(--primary)]"> Conduct</span>
+          </h2>
+        </div>
+
+        {/* ===== CONTENT SECTION ===== */}
+        <div className="grid md:grid-cols-5 gap-12 items-center">
+
+          {/* LEFT ICON */}
+          <div className="md:col-span-1 flex justify-center md:justify-start">
+            <Scale size={120} strokeWidth={1.5} />
+          </div>
+
+          {/* RIGHT TEXT */}
+          <div className="md:col-span-4 leading-relaxed space-y-4">
+            <p>
+              Sajjan Precision adheres to a strict ‘ Code of Conduct ’ to ensure that fair practices are implemented in the company and utmost care is taken to create an inclusive, non-discriminatory and safe work environment for all.
+            </p>
+
+            <p>
+              The variety of areas covered in the COC prefaces the code with its guiding principles and then explains how it approaches internal activities such as Health & Safety, working hours et al and external activities like adhering to the Government regulations such as minimum wage, labour laws etc.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+      <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
+
+        {/* Glow Effect */}
+
+
+        <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight">
+            Ready to Power Your Project with
+            <span className="text-[var(--primary)]"> SAJJAN?</span>
+          </h2>
+
+          {/* Description */}
+          <p className="text-gray-400 max-w-2xl mx-auto mb-10">
+            Partner with SAJJAN for high-performance stainless steel and alloy steel
+            casting solutions engineered for durability, efficiency, and industrial excellence.
+          </p>
+
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+
+            <Link className="" href="/quote">
+              <button className="flex justify-between items-center gap-2 primary-btn">
+                Request a Quote
+                <ArrowRight size={18} />
+              </button>
+            </Link>
+
+            <Link href="/industries">
+              <button className="flex justify-between items-center gap-2 secondary-btn">
+                Explore Industries
+              </button>
+            </Link>
+
+          </div>
+        </div>
+      </section>
 
     </>
 
@@ -395,70 +447,3 @@ after:to-transparent mb-4">
 export default About
 
 
-
-// "use client";
-// import React from "react";
-// import { TimelineCard } from "@/components/example";
-
-// export default function Features5() {
-//   const timeline = [
-//     {
-//       year: "2024",
-//       title: "Next-Gen Platform Launch",
-//       description:
-//         "Revolutionary features that transform how teams work together.",
-//       image: "/images/demo1.jpg",
-//     },
-//     {
-//       year: "2023",
-//       title: "Global Expansion",
-//       description:
-//         "Reaching millions of users across 50+ countries worldwide.",
-//       image: "/images/demo2.jpg",
-//     },
-//     {
-//       year: "2022",
-//       title: "Enterprise Ready",
-//       description:
-//         "Built for scale with enterprise-grade security and reliability.",
-//       image: "/images/demo3.jpg",
-//     },
-//     {
-//       year: "2021",
-//       title: "The Beginning",
-//       description:
-//         "Started with a simple idea to make work more efficient.",
-//       image: "/images/demo4.jpg",
-//     },
-//   ];
-
-//   return (
-//     <section className="py-20 w-full">
-//       <div className="max-w-6xl mx-auto px-4 space-y-16">
-
-//         <div className="text-center">
-//           <h2 className="text-4xl font-bold mb-4">
-//             Our Journey
-//           </h2>
-//           <p className="text-lg">
-//             Building the future, one milestone at a time
-//           </p>
-//         </div>
-
-//         <div className="grid md:grid-cols-2 gap-12">
-//           {timeline.map((item, index) => (
-//             <TimelineCard
-//               key={index}
-//               index={index}
-//               year={item.year}
-//               title={item.title}
-//               description={item.description}
-//               image={item.image}
-//             />
-//           ))}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }

@@ -136,7 +136,7 @@ after:to-transparent mb-6">
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]">
-                                        <Icon size={20} className="text-white" />
+                                        <Icon size={20} className="text-white flex-shrink-0" />
                                     </div>
 
                                     <div>

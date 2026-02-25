@@ -13,9 +13,9 @@ const timeline = [
     title: "CAST BELTS AND SPARES",
     description:
       "Manufacturing high-performance cast link belts and spares designed for durability, heat resistance, and reliable operation in demanding industrial environments.",
-    features: [
-      "CAST LINK BELTS"
-    ],
+    // features: [
+    //   "CAST LINK BELTS"
+    // ],
     image: "/home/manufacturing.png"
   },
   {
@@ -23,20 +23,20 @@ const timeline = [
     title: "HEAT TREATMENT FIXTURES",
     description:
       "Comprehensive range of heat treatment fixtures engineered for strength, dimensional stability, and long service life in high-temperature furnace applications.",
-    features: [
-      "BASE GRIDS",
-      "STACKABLE GRIDS",
-      "CHARGING FIXTURES",
-      "BASKETS",
-      "MESHES",
-      "FIXTURES FOR PIT FURNACE / GCF",
-      "FURNACE FURNITURE / ACCESSORIES",
-      "FURNACE RAIL AND ROLLERS",
-      "PUSHER HEADS AND CHAIN GUIDE",
-      "JOB PEDESTALS / FURNACE PIERS",
-      "WALKING BEAMS SPARES",
-      "SHAKER HEARTH PLATES"
-    ],
+    // features: [
+    //   "BASE GRIDS",
+    //   "STACKABLE GRIDS",
+    //   "CHARGING FIXTURES",
+    //   "BASKETS",
+    //   "MESHES",
+    //   "FIXTURES FOR PIT FURNACE / GCF",
+    //   "FURNACE FURNITURE / ACCESSORIES",
+    //   "FURNACE RAIL AND ROLLERS",
+    //   "PUSHER HEADS AND CHAIN GUIDE",
+    //   "JOB PEDESTALS / FURNACE PIERS",
+    //   "WALKING BEAMS SPARES",
+    //   "SHAKER HEARTH PLATES"
+    // ],
     image: "/home/HEAT TREATMENT FIXTURES.png"
   },
   {
@@ -44,10 +44,10 @@ const timeline = [
     title: "PARTS FOR FOOD MACHINERIES",
     description:
       "Precision-cast components for food processing equipment ensuring hygiene standards, corrosion resistance, and consistent performance.",
-    features: [
-      "Mixing Blades",
-      "PD Pump Parts"
-    ],
+    // features: [
+    //   "Mixing Blades",
+    //   "PD Pump Parts"
+    // ],
     image: "/home/PARTS FOR FOOD MACHINERIES.png"
   },
   {
@@ -55,12 +55,12 @@ const timeline = [
     title: "ROLLERS AND RADIANT TUBES",
     description:
       "High-temperature resistant rollers and radiant tube assemblies designed for efficient heat transfer and reliable furnace operations.",
-    features: [
-      "FURNACE ROLLS",
-      "RADIANT TUBE ASSEMBLIES",
-      "RECUPERATOR TUBE ASSEMBLIES",
-      "RIDER BARS"
-    ],
+    // features: [
+    //   "FURNACE ROLLS",
+    //   "RADIANT TUBE ASSEMBLIES",
+    //   "RECUPERATOR TUBE ASSEMBLIES",
+    //   "RIDER BARS"
+    // ],
     image: "/home/ROLLERS AND RADIANT TUBES.png"
   },
   {
@@ -68,9 +68,9 @@ const timeline = [
     title: "SEPARATORS AND DECANTERS",
     description:
       "Robust cast components for separator and decanter systems ensuring operational efficiency, durability, and resistance to harsh industrial conditions.",
-    features: [
-      "SEPARATORS"
-    ],
+    // features: [
+    //   "SEPARATORS"
+    // ],
     image: "/home/SEPARATORS AND DECANTERS.jpg"
   },
   {
@@ -78,9 +78,9 @@ const timeline = [
     title: "GALVANIZING LINE SPARES",
     description:
       "Specialized cast spares for galvanizing lines built to withstand corrosive environments and continuous high-temperature operations.",
-    features: [
-      "GALAVNIZING"
-    ],
+    // features: [
+    //   "GALAVNIZING"
+    // ],
     image: "/home/SEPARATORS AND DECANTERS.jpg"
   },
   {
@@ -88,9 +88,9 @@ const timeline = [
     title: "PETROCHEMICAL INDUSTRY",
     description:
       "Precision-engineered castings and spares tailored for petrochemical industry applications requiring heat resistance and structural integrity.",
-    features: [
-      "SPARES FOR PETROCHEMICAL INDUSTRY"
-    ],
+    // features: [
+    //   "SPARES FOR PETROCHEMICAL INDUSTRY"
+    // ],
     image: "/home/PETROCHEMICAL INDUSTRY.jpg"
   },
   {
@@ -98,9 +98,9 @@ const timeline = [
     title: "CEMENT INDUSTRY",
     description:
       "Durable industrial cast components developed for heavy-duty cement plant operations with high wear resistance and thermal stability.",
-    features: [
-      "SPARES FOR CEMENT INDUSTRY"
-    ],
+    // features: [
+    //   "SPARES FOR CEMENT INDUSTRY"
+    // ],
     image: "/home/CEMENT INDUSTRY.jpg"
   }
 ];
@@ -147,6 +147,32 @@ const certifications = [
   {
     title: "ISO 45001: 2018",
     description: `SAJJAN has upgraded to the ISO 45001: 2018 certification, world’s first integrated international standard for occupational health and safety. This is a new industry standard, the framework of which has been coordinated and developed by a committee of occupational health and safety experts from around the world. SAJJAN reinstated its health, safety and environmental committee and took a collaborative approach in reviewing all aspects of the company to ensure that the company is providing a safe and secure working environment.`
+  }
+];
+const activities = [
+  {
+    title: "88th Annual Function Celebration at Sajjan Precision Castings",
+    date: "13 April",
+    image: "/home/Annual Function.jpg",
+    link: "#"
+  },
+  {
+    title: "Diet and Health Awareness Program",
+    date: "10 September",
+    image: "/home/Health Awareness.jpg",
+    link: "#"
+  },
+  {
+    title: "Tree Plantation Drive",
+    date: "10 September",
+    image: "/home/Tree Plantation.jpg",
+    link: "#"
+  },
+  {
+    title: "Awarded with Star Performance in Engineering Exports North India",
+    date: "10 September",
+    image: "/home/Awarded.jpg",
+    link: "#"
   }
 ];
 
@@ -280,7 +306,7 @@ after:to-transparent mb-4">
             </p>
           </div>
 
-          <div className="max-w-7xl mx-auto px-10 py-10">
+          <div className="max-w-7xl mx-auto px-10">
 
             <div
               className="
@@ -288,32 +314,15 @@ after:to-transparent mb-4">
       grid-cols-1
       sm:grid-cols-2
       lg:grid-cols-4
-      auto-rows-auto
     "
             >
 
               {timeline.map((item, index) => {
 
-                // Existing large card logic
-                const isLarge = index % 3 === 0;
-
-                // Target year 8 card
-                const isYearEight =
-                  item.year === 8 ||
-                  item.year === "8";
-
                 return (
                   <div
                     key={index}
-                    className={`
-            relative group [perspective:1000px]
-            ${isYearEight
-                        ? "lg:col-span-3 lg:row-span-2"
-                        : isLarge
-                          ? "lg:col-span-2 lg:row-span-2"
-                          : "lg:col-span-1 lg:row-span-1"
-                      }
-          `}
+                    className="relative group [perspective:1000px]"
                   >
                     <div className="relative h-full w-full rounded-2xl transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
 
@@ -344,7 +353,7 @@ after:to-transparent mb-4">
                           {item.description}
                         </p>
 
-                        <div className="space-y-1">
+                        {/* <div className="space-y-1">
                           {item.features.map((feature, i) => (
                             <div key={i} className="flex items-start gap-2">
                               <span className="text-[var(--secondary)] text-xs">•</span>
@@ -353,7 +362,7 @@ after:to-transparent mb-4">
                               </span>
                             </div>
                           ))}
-                        </div>
+                        </div> */}
                       </div>
 
                       {/* BACK */}
@@ -362,7 +371,7 @@ after:to-transparent mb-4">
                           src={item.image || "/images/sample.jpg"}
                           alt={item.title}
                           fill
-                          className="object-cover"
+                          className="object-fill"
                         />
                       </div>
 
@@ -387,7 +396,7 @@ after:to-transparent mb-4">
           </div>
         </div>
       </section>
-      {/* sertification */}
+      {/* iertification */}
       <motion.section
         className="Certified relative py-16
   bg-gradient-to-br 
@@ -550,6 +559,60 @@ after:to-transparent"
         ))}
       </section>
       <OurPartners />
+      <section className="Activities py-15">
+        <div className="max-w-7xl mx-auto px-6">
+
+          {/* ===== SECTION HEADING ===== */}
+          <div className="flex items-center justify-between mb-14">
+            <h2 className=" text-white">
+              Activities
+            </h2>
+          </div>
+
+          {/* ===== CARD GRID ===== */}
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+            {activities.map((item, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl border border-white/10  transition duration-500"
+              >
+
+                {/* IMAGE */}
+                <div className="relative h-60 w-full overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition duration-700"
+                  />
+
+                  {/* Date Badge */}
+                  <div className="absolute top-4 left-4 bg-black/70 backdrop-blur px-3 py-1 text-xs text-white rounded-full">
+                    {item.date}
+                  </div>
+                </div>
+
+                {/* CONTENT */}
+                <div className="p-6 bg-white/5 backdrop-blur-md">
+                  <h3 className="leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <Link
+                    href={item.link}
+                    className="inline-block mt-4 text-sm text-gray-400 group-hover:text-white transition"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+        </div>
+      </section>
       {/* ================= CTA SECTION ================= */}
       <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
 
@@ -573,7 +636,7 @@ after:to-transparent"
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
 
-            <Link className="" href="/quote">
+            <Link className="" href="/contact-us">
               <button className="flex justify-between items-center gap-2 primary-btn">
                 Request a Quote
                 <ArrowRight size={18} />

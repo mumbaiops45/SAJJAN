@@ -19,9 +19,9 @@ export default function ServicesPage() {
         <div className="relative z-10 max-w-7xl mx-auto text-white">
 
           {/* Heading */}
-          <h2 className="text-center mb-16">
+          <h1 className="text-center mb-16">
             Advanced <span className="text-[var(--primary)]">Manufacturing </span>& <span className="text-[var(--primary)]">Engineering</span>
-          </h2>
+          </h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
@@ -72,18 +72,29 @@ export default function ServicesPage() {
 
         </div>
       </div>
-      <div id="Engineering" className="intro px-4 md:px-10 lg:px-30 pt-10 md:pt-15 relative overflow-hidden
+      <div id="Engineering" className="min-h-[60vh] intro px-4 md:px-10 lg:px-30 pt-10 md:py-10 relative overflow-hidden
+ 
+before:content-[''] 
+before:absolute 
+before:inset-0 
+before:bg-[url('/manufacturing/engineering.png')] 
+before:bg-cover 
+before:bg-center 
+before:bg-no-repeat
 
-  
-  text-white scroll-fade"
+
+flex 
+items-center 
+justify-center
+ scroll-fade"
       >
-        <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
+        <div className="flex flex-col md:flex-row items-center  relative z-1">
 
           {/* TEXT SECTION */}
-          <div className="flex flex-col items-start gap-5 md:w-3/5">
+          <div className="flex flex-col items-start  md:w-1/2">
 
             <h2
-              className="relative inline-block pb-4
+              className="relative inline-block pb-2
       after:content-['']
 after:absolute
 after:left-0
@@ -100,7 +111,7 @@ after:to-transparent"
               </span>
             </h2>
 
-            <p className="text-gray-200">
+            <p className="text-gray-700 pt-2">
               The approach to manufacturing products at <strong>SAJJAN</strong> — whether it is a
               <strong>cost-saving casting for an existing part</strong>, a component that
               <strong>faces specification challenges</strong>, or a
@@ -117,29 +128,28 @@ after:to-transparent"
             </p>
 
           </div>
-
-          {/* IMAGE SECTION */}
-          <div className="md:w-2/5">
-            <Image
-              src="/manufacturing/Screenshot 2026-02-24 183042.png"
-              alt="LED wall display solution Bangalore"
-              width={600}
-              height={400}
-              className="rounded-xl w-full h-auto"
-            />
-          </div>
-
         </div>
       </div>
-      <div id="Prototyping-nd-pattern-shop" className="intro px-4 md:px-10 lg:px-30 pt-10 md:pt-15 relative overflow-hidden
+      <div id="Prototyping-nd-pattern-shop" className="min-h-[60vh] intro px-4 md:px-10 lg:px-30 pt-10 md:py-10 relative overflow-hidden
+ 
+before:content-[''] 
+before:absolute 
+before:inset-0 
+before:bg-[url('/manufacturing/prototype.jpg')] 
+before:bg-cover 
+before:bg-center 
+before:bg-no-repeat
 
-  
-  text-white scroll-fade"
+
+flex 
+items-center 
+justify-center
+ scroll-fade"
       >
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8 relative z-10">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8 relative z-1">
 
           {/* TEXT SECTION */}
-          <div className="flex flex-col items-start gap-5 md:w-3/5">
+          <div className="flex flex-col items-start gap-5 md:w-1/2">
 
             <h2 className="relative inline-block pb-4
       after:content-['']
@@ -177,25 +187,89 @@ after:to-transparent"
 
           </div>
 
-          {/* IMAGE SECTION */}
-          <div className="md:w-2/5">
-            <Image
-              src="/manufacturing/Screenshot 2026-02-24 183119.png"
-              alt="Audio design installation systems"
-              width={600}
-              height={400}
-              className="rounded-xl w-full h-auto"
-            />
+        </div>
+      </div>
+      <div id="Machining" className="min-h-[60vh] intro px-4 md:px-10 lg:px-30 pt-10 md:py-10 relative overflow-hidden
+ 
+before:content-[''] 
+before:absolute 
+before:inset-0 
+before:bg-[url('/manufacturing/machine.jpg')] 
+before:bg-cover 
+before:bg-center 
+before:bg-no-repeat
+
+
+flex 
+items-center 
+justify-center
+ scroll-fade"
+      >
+        <div className="flex flex-col md:flex-row items-center  relative z-1">
+
+          {/* TEXT SECTION */}
+          <div className="flex flex-col items-start  md:w-1/2">
+
+            <h2 className="relative inline-block pb-2
+      after:content-['']
+after:absolute
+after:left-0
+after:bottom-0
+after:w-full
+after:h-1
+after:rounded-full
+after:bg-gradient-to-r
+after:from-[var(--primary)]
+after:to-transparent"
+            >
+              <span className="text-[var(--primary)]">
+                Machining
+              </span>
+            </h2>
+
+            <p className="text-gray-700 pt-2">
+              <strong>SAJJAN</strong> offers extensive <strong>in-house machining</strong> and
+              <strong>finishing services</strong>. Castings are machined according to
+              <strong>customer specifications</strong> using both
+              <strong>conventional machines</strong> and advanced
+              <strong>CNC vertical and horizontal machining centres</strong>.
+            </p>
+
+            <p className="text-gray-700 pt-2">
+              We are equipped with the following <strong>machinery for part manufacturing and development</strong>:
+            </p>
+
+            <ul className="text-gray-700 pt-2">
+              <li><strong>Vertical Machining Centres</strong></li>
+              <li><strong>Horizontal Machining Centres</strong></li>
+              <li><strong>CNC Turning Centres</strong></li>
+              <li><strong>Vertical Turning Lathe (VTL) up to 1m diameter</strong></li>
+              <li><strong>Surface Grinder</strong></li>
+              <li><strong>Conventional Machining Lathes up to 700 mm OD & 4 m length</strong></li>
+              <li><strong>Vertical Plano Miller</strong></li>
+            </ul>
+
           </div>
 
         </div>
       </div>
-      <div id="Manufacturing" className="intro px-4 md:px-10 lg:px-30 pt-10 md:pt-15 relative overflow-hidden
+      <div id="Manufacturing" className="min-h-[60vh] intro px-4 md:px-10 lg:px-30 pt-10 md:py-10 relative overflow-hidden
+ 
+before:content-[''] 
+before:absolute 
+before:inset-0
 
-  
-  text-white scroll-fade"
+before:bg-cover 
+before:bg-center 
+before:bg-no-repeat
+
+
+flex 
+items-center
+justify-center
+ scroll-fade"
       >
-        <div className="flex flex-col md:flex-row items-center gap-8 relative z-10">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-8 relative z-10">
 
           {/* TEXT SECTION */}
           <div className="flex flex-col items-start gap-5 md:w-3/5">
@@ -235,80 +309,50 @@ after:to-transparent"
 
           {/* IMAGE SECTION */}
           <div className="md:w-2/5">
-            <Image
-              src="/manufacturing/manu.png"
-              alt="Acoustic design installation solutions"
-              width={600}
-              height={400}
-              className="rounded-xl w-full h-auto"
-            />
-          </div>
+  <div className="grid grid-cols-2 gap-4">
+    
+    <div className="aspect-square relative overflow-hidden border-l-3 border-b-3 border-[var(--primary)] rounded-md">
+      <Image
+        src="/manufacturing/Manufacturing1.png"
+        alt="Image 1"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+    <div className="aspect-square relative overflow-hidden  border-l-3 border-b-3 border-[var(--primary)] rounded-md">
+      <Image
+        src="/manufacturing/Manufacturing2.png"
+        alt="Image 2"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+    <div className="aspect-square relative overflow-hidden border-l-3 border-b-3 border-[var(--primary)] rounded-md">
+      <Image
+        src="/manufacturing/Manufacturing3.png"
+        alt="Image 3"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+    <div className="aspect-square relative overflow-hidden border-l-3 border-b-3 border-[var(--primary)] rounded-md">
+      <Image
+        src="/manufacturing/Manufacturing4.png"
+        alt="Image 4"
+        fill
+        className="object-cover"
+      />
+    </div>
+
+  </div>
+</div>
 
         </div>
       </div>
-      <div id="Machining" className="intro px-4 md:px-10 lg:px-30 py-10 md:pt-15 relative overflow-hidden
 
-  text-white scroll-fade"
-      >
-        <div className="flex flex-col md:flex-row-reverse items-center gap-8 relative z-10">
-
-          {/* TEXT SECTION */}
-          <div className="flex flex-col items-start gap-5 md:w-3/5">
-
-            <h2 className="relative inline-block pb-4
-      after:content-['']
-after:absolute
-after:left-0
-after:bottom-0
-after:w-full
-after:h-1
-after:rounded-full
-after:bg-gradient-to-r
-after:from-[var(--primary)]
-after:to-transparent"
-            >
-              <span className="text-[var(--primary)]">
-                Machining
-              </span>
-            </h2>
-
-            <p>
-              <strong>SAJJAN</strong> offers extensive <strong>in-house machining</strong> and
-              <strong>finishing services</strong>. Castings are machined according to
-              <strong>customer specifications</strong> using both
-              <strong>conventional machines</strong> and advanced
-              <strong>CNC vertical and horizontal machining centres</strong>.
-            </p>
-
-            <p>
-              We are equipped with the following <strong>machinery for part manufacturing and development</strong>:
-            </p>
-
-            <ul>
-              <li><strong>Vertical Machining Centres</strong></li>
-              <li><strong>Horizontal Machining Centres</strong></li>
-              <li><strong>CNC Turning Centres</strong></li>
-              <li><strong>Vertical Turning Lathe (VTL) up to 1m diameter</strong></li>
-              <li><strong>Surface Grinder</strong></li>
-              <li><strong>Conventional Machining Lathes up to 700 mm OD & 4 m length</strong></li>
-              <li><strong>Vertical Plano Miller</strong></li>
-            </ul>
-
-          </div>
-
-          {/* IMAGE SECTION */}
-          <div className="md:w-2/5">
-            <Image
-              src="/manufacturing/Screenshot 2026-02-24 183150.png"
-              alt="Visual design and AV integration"
-              width={600}
-              height={400}
-              className="rounded-xl w-full h-auto"
-            />
-          </div>
-
-        </div>
-      </div>
     </div>
 
 

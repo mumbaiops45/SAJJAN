@@ -50,8 +50,8 @@ export default function Navbar() {
 
                     {/* Get a Quote */}
                     <Link
-                        href="/quote"
-                        className="ml-6 font-medium transition duration-300 text-gray-300 hover:text-[color:var(--primary)]"
+                        href="/contact-us"
+                        className="primary-btn"
                     >
                         Get a Quote
                     </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
                     ))}
 
                     <Link
-                        href="/quote"
+                        href="contact-us"
                         onClick={() => setIsOpen(false)}
                         className="block font-medium transition duration-300 text-gray-300 hover:text-[color:var(--primary)]"
                     >
