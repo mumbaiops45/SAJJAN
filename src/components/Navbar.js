@@ -15,12 +15,12 @@ export default function Navbar() {
         { name: "Products", path: "/products" },
         { name: "Manufacturing", path: "/manufacturing" },
         { name: "Industries", path: "/industries" },
-        { name: "Careers", path: "/careers" },
+        { name: "Why SAJJAN", path: "/why-sajjan" },
         { name: "Contact", path: "/contact-us" },
     ];
 
     return (
-        <nav className="sticky top-0 z-50 bg-[#011945] text-white">
+        <nav className="sticky top-0 z-50 bg-[#011945]/80 backdrop-blur-md">
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
                 {/* Logo */}

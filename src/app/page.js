@@ -7,6 +7,7 @@ import WhyChooseUs from "@/components/WhyChoose";
 import Infrastructure from "@/components/HomeInfrastructure";
 import OurPartners from "@/components/OurPartners";
 import { motion } from "framer-motion";
+import FAQSection from "@/components/FAQ";
 const timeline = [
   {
     year: "01",
@@ -181,7 +182,28 @@ const activities = [
 export default function Home() {
   return (
     <>
-      <section className={`relative w-full h-screen overflow-hidden ${styles.hero}`}>
+      <section className={`relative w-full py-15 md:py-0 h-auto md:h-screen overflow-hidden ${styles.hero}`}>
+
+        {/* Mobile Background Image */}
+        <div className="absolute inset-0 block md:hidden">
+          <img
+            src="/home/hero-video-poster.png"
+            alt="Steel manufacturing background"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Desktop Video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+        >
+          <source src="/home/hero.mp4" type="video/mp4" />
+        </video>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-start justify-center h-full px-6 max-w-5xl mx-auto">
@@ -198,18 +220,6 @@ export default function Home() {
             Get Started
           </a>
         </div>
-
-        {/* Desktop Video */}
-        <video
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-        >
-          <source src="/home/hero.mp4" type="video/mp4" />
-        </video>
 
       </section>
       <section className="w-full py-6 lg:p-15 px-4
@@ -559,7 +569,7 @@ after:to-transparent"
         ))}
       </section>
       <OurPartners />
-      <section className="Activities py-15">
+      <section className="Activities py-15 px-10">
         <div className="max-w-7xl mx-auto px-6">
 
           {/* ===== SECTION HEADING ===== */}
@@ -613,6 +623,7 @@ after:to-transparent"
           </div>
         </div>
       </section>
+       {/* <FAQSection className="" /> */}
       {/* ================= CTA SECTION ================= */}
       <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
 
@@ -643,9 +654,9 @@ after:to-transparent"
               </button>
             </Link>
 
-            <Link href="/industries">
+            <Link href="/products">
               <button className="flex justify-between items-center gap-2 secondary-btn">
-                Explore Industries
+                Our Products
               </button>
             </Link>
 

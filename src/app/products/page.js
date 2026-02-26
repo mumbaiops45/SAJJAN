@@ -367,7 +367,7 @@ const Product = () => {
               </div>
 
               <div className="p-6">
-                <div className="relative inline-block pb-4
+                <div className="relative inline-block pb-2
       after:content-['']
 after:absolute
 after:left-0
@@ -381,7 +381,7 @@ after:to-transparent"><h3 className="text-xl font-semibold text-[var(--primary)]
                   {product.name}
                 </h3></div>
                 
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600  pt-2 text-sm leading-relaxed">
                   {product.description}
                 </p>
               </div>

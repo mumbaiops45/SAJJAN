@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -13,6 +14,7 @@ export default function Footer() {
     { name: "Products", path: "/products" },
     { name: "Manufacturing", path: "/manufacturing" },
     { name: "Industries", path: "/industries" },
+    { name: "Why SAJJAN", path: "/why-sajjan" },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
   ];
@@ -32,12 +34,18 @@ export default function Footer() {
     <footer className="bg-[#011945] text-gray-300">
 
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-10 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
         {/* Left Section - Logo + About */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-6">LOGO</h2>
-          <p className="text-sm leading-7">
+          <Image
+            src="/SAJJAN.jpg"   // 🔥 Put your logo path here
+            alt="Company Logo"
+            width={150}
+            height={50}
+            priority
+          />
+          <p className="text-sm leading-7 pt-5">
 
             SAJJAN is a pioneer in the production of heat-resistant tool steel and stainless steel castings, manufactures through centrifugal, static and investment casting processes.
           </p>
@@ -143,8 +151,23 @@ export default function Footer() {
 
       {/* Bottom Copyright Section */}
       <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-6 py-5 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} LOGO. All Rights Reserved.
+        <div className="max-w-7xl mx-auto px-20 py-5 flex items-center justify-between text-sm text-gray-400">
+
+          {/* Left Side */}
+          <div>
+            © {new Date().getFullYear()} LOGO. All Rights Reserved.
+          </div>
+
+          {/* Right Side */}
+          <div>
+            <Link
+              href="/terms-and-conditions"
+              className="text-gray-400 hover:text-white transition duration-300"
+            >
+              Terms & Conditions
+            </Link>
+          </div>
+
         </div>
       </div>
 

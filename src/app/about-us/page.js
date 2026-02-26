@@ -3,8 +3,9 @@ import React from 'react'
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, ShieldCheck ,Scale} from "lucide-react";
+import { ArrowRight, ShieldCheck, Scale ,HeartHandshake, Sprout } from "lucide-react";
 import OurPartners from "@/components/OurPartners";
+import FAQSection from "@/components/FAQ";
 const certifications = [
   {
     title: "ISO 9001:2015",
@@ -346,18 +347,133 @@ after:to-transparent mb-4">
 
         </div>
       </motion.section>
+      
       <OurPartners />
-          <section className="code_of_cunduct relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/50 py-24 px-6 lg:px-15">
+      <section className="Quality relative 
+        bg-gradient-to-br 
+        from-[var(--primary)]/50 
+        via-[var(--secondary)]/5
+        to-[var(--secondary)]/20 overflow-hidden py-16 px-6 lg:px-15">
+        <div className="max-w-7xl mx-auto">
 
-      {/* Top Gradient Line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-l from-[var(--primary)] to-[var(--secondary)]"></div>
+          {/* ===== HEADING ===== */}
+          <div className="mb-10">
+            <h2
+              className="relative inline-block pb-4
+                  after:content-['']
+                  after:absolute
+                  after:left-0
+                  after:bottom-0
+                  after:w-full
+                  after:h-1
+                  after:rounded-full
+                  after:bg-gradient-to-r
+                  after:from-[var(--primary)]
+                  after:to-transparent"
+            >
+              Corporate 
+              <span className="text-[var(--primary)]"> Social Responsibility</span>
+            </h2>
+          </div>
 
-      <div className="max-w-7xl mx-auto">
+          {/* ===== CONTENT SECTION ===== */}
+          <div className="grid md:grid-cols-5 gap-12 items-center">
 
-        {/* ===== HEADING ===== */}
-        <div className="mb-8">
-          <h2
-            className="relative inline-block pb-4
+            {/* LEFT ICON */}
+            <div className="md:col-span-1 translate-x-12 flex justify-center md:justify-start">
+              < HeartHandshake size={120} strokeWidth={1.5} />
+            </div>
+
+            {/* RIGHT TEXT */}
+            <div className="md:col-span-4 leading-relaxed space-y-4">
+              <p>
+               We at SAJJAN are deeply committed to contributing to the betterment of the society. As a part of this endeavour, we are supporting the cause of imparting education for the underprivileged children. Our focus is to provide young people opportunities to realize their potential and bring about a positive a change through education. For the mission; we have taken the responsibility to educate 30 children from the economically backward section. This program is an ongoing process marked by newer names in the list every year.
+              </p>
+
+              <p>
+              Some of the events conducted under Corporate Social Responsibility by SAJJAN are listed below:
+              </p>
+
+
+            </div>
+
+          </div>
+          <div className="w-full py-10">
+            {/* Bullet Points */}
+            <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+              <ul className="list-disc pl-6 space-y-3 text-gray-200 text-sm md:text-base">
+                <li>Children’s Camp organized at a village school where 440 school children were donated shoes from Liberty Footwear</li>
+                <li>SAJJAN collaborates with the NGO Ashirwad in the field of developmental disability mainly in cerebral palsy treatment of children.</li>
+                <li>SAJJAN lightened the village road stretch of 1 kilometre with electricity connection, street lights, and electricity poles. This is to help people around the village to feel secure at night.</li>
+                <li>SAJJAN regularly coordinates with police patrols to ensure the safety of its employees and village residents.</li>
+                <li>SAJJAN extended its support for tree plantation drive in the factory and the village to increase green cover.</li>
+                <li>SAJJAN also planted 500 plants to increase green country</li>
+                <li>SAJJAN celebrated Independence Day with village school children.</li>
+                <li>SAJJAN also organises Inter Company Cricket matches.</li>
+              </ul>
+
+              <Image
+      src="/WhySajajn/Environmental Concern.jpg"
+      alt="Sample Image"
+      width={800}
+      height={500}
+      className="rounded-xl object-cover"
+    />
+
+            </div>
+
+          </div>
+        </div>
+        <div className="mb-5">
+            <h2
+              className="relative inline-block pb-4
+                  after:content-['']
+                  after:absolute
+                  after:left-0
+                  after:bottom-0
+                  after:w-full
+                  after:h-1
+                  after:rounded-full
+                  after:bg-gradient-to-r
+                  after:from-[var(--primary)]
+                  after:to-transparent"
+            >
+              
+              <span className="text-[var(--primary)]">Environmental </span> Concern
+            </h2>
+          </div>
+        <div className="grid md:grid-cols-5 gap-12 items-center">
+
+            {/* LEFT ICON */}
+            <div className="md:col-span-4 leading-relaxed space-y-4">
+              <p>
+               We are one of the few companies with a proactive approach towards sustainability and conservation of the environment. All our processes conform to international standards in accordance to environmental laws. In keeping with environmental conservation, we have our own process of segregation and waste management, comprising of primary, secondary and tertiary treatments. All liquid and solid wastes are disposed off in an environmentally and legally acceptable manner. We believe in maintaining a clean and green surrounding to make the world a better place to live in.
+              </p>
+
+
+            </div>
+            <div className="md:col-span-1 translate-x-12 flex justify-center md:justify-start">
+              <  Sprout size={120} strokeWidth={1.5} />
+            </div>
+
+            {/* RIGHT TEXT */}
+            
+
+          </div>
+
+      </section>
+      <section className="code_of_cunduct relative bg-gradient-to-l from-[var(--secondary)] to-[var(--primary)]/50 py-24 px-6 lg:px-15">
+
+        {/* Top Gradient Line */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-l from-[var(--primary)] to-[var(--secondary)]"></div>
+
+        <div className="max-w-7xl mx-auto">
+
+          {/* ===== HEADING ===== */}
+          <div className="mb-8">
+            <h2
+              className="relative inline-block pb-4
             after:content-['']
             after:absolute
             after:left-0
@@ -368,37 +484,38 @@ after:to-transparent mb-4">
             after:bg-gradient-to-r
             after:from-[var(--primary)]
             after:to-transparent"
-          >
-            <span className="text-[var(--primary)]">Code </span>
-            of
-            <span className="text-[var(--primary)]"> Conduct</span>
-          </h2>
-        </div>
-
-        {/* ===== CONTENT SECTION ===== */}
-        <div className="grid md:grid-cols-5 gap-12 items-center">
-
-          {/* LEFT ICON */}
-          <div className="md:col-span-1 flex justify-center md:justify-start">
-            <Scale size={120} strokeWidth={1.5} />
+            >
+              <span className="text-[var(--primary)]">Code </span>
+              of
+              <span className="text-[var(--primary)]"> Conduct</span>
+            </h2>
           </div>
 
-          {/* RIGHT TEXT */}
-          <div className="md:col-span-4 leading-relaxed space-y-4">
-            <p>
-              Sajjan Precision adheres to a strict ‘ Code of Conduct ’ to ensure that fair practices are implemented in the company and utmost care is taken to create an inclusive, non-discriminatory and safe work environment for all.
-            </p>
+          {/* ===== CONTENT SECTION ===== */}
+          <div className="grid md:grid-cols-5 gap-12 items-center">
 
-            <p>
-              The variety of areas covered in the COC prefaces the code with its guiding principles and then explains how it approaches internal activities such as Health & Safety, working hours et al and external activities like adhering to the Government regulations such as minimum wage, labour laws etc.
-            </p>
+            {/* LEFT ICON */}
+            <div className="md:col-span-1 flex justify-center md:justify-start">
+              <Scale size={120} strokeWidth={1.5} />
+            </div>
+
+            {/* RIGHT TEXT */}
+            <div className="md:col-span-4 leading-relaxed space-y-4">
+              <p>
+                Sajjan Precision adheres to a strict ‘ Code of Conduct ’ to ensure that fair practices are implemented in the company and utmost care is taken to create an inclusive, non-discriminatory and safe work environment for all.
+              </p>
+
+              <p>
+                The variety of areas covered in the COC prefaces the code with its guiding principles and then explains how it approaches internal activities such as Health & Safety, working hours et al and external activities like adhering to the Government regulations such as minimum wage, labour laws etc.
+              </p>
+            </div>
+
           </div>
 
         </div>
 
-      </div>
-
-    </section>
+      </section>
+        <FAQSection />
 
       <section className="CTA relative py-24 bg-gradient-to-br from-[var(--secondary)]/40 via-black/10 to-[var(--primary)]/30 ">
 
